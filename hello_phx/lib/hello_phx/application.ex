@@ -7,6 +7,7 @@ defmodule HelloPhx.Application do
 
   @impl true
   def start(_type, _args) do
+    plug
     children = [
       # Start the Telemetry supervisor
       HelloPhxWeb.Telemetry,
@@ -15,9 +16,10 @@ defmodule HelloPhx.Application do
       # Start Finch
       {Finch, name: HelloPhx.Finch},
       # Start the Endpoint (http/https)
-      HelloPhxWeb.Endpoint
+      HelloPhxWeb.Endpoint,
       # Start a worker by calling: HelloPhx.Worker.start_link(arg)
       # {HelloPhx.Worker, arg}
+      HelloPhx.Repo
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

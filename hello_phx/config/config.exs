@@ -7,6 +7,14 @@
 # General application configuration
 import Config
 
+config :hello_phx, HelloPhx.Repo,
+  database: "hello_phx_repo",
+  username: "root",
+  password: "root",
+  hostname: "localhost",
+  port: 5432
+
+config :hello_phx, ecto_repos: [HelloPhx.Repo]
 # Configures the endpoint
 config :hello_phx, HelloPhxWeb.Endpoint,
   url: [host: "localhost"],
