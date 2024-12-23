@@ -7,7 +7,6 @@ defmodule HelloPhx.Application do
 
   @impl true
   def start(_type, _args) do
-    plug
     children = [
       # Start the Telemetry supervisor
       HelloPhxWeb.Telemetry,
