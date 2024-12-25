@@ -49,7 +49,9 @@ defmodule HelloPhx.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:ecto_sql, "~> 3.2"},
-      {:postgrex, "~> 0.15"}
+      {:postgrex, "~> 0.15"},
+      {:redix, "~> 1.1"},
+      {:castore, ">= 0.0.0"}
     ]
   end
 
