@@ -57,4 +57,6 @@ defmodule HelloPhx.Posts.Post do
     |> IO.inspect(label: "attr")
   end
 
+
+
 end
