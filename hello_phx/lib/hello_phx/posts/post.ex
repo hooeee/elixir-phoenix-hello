@@ -5,6 +5,10 @@ defmodule HelloPhx.Posts.Post do
   import Ecto.Query
 
 
+  ## schema, Ecto.Schema를 사용하여 구조체를 생성할 수 잇다.
+  ## defstruct [:title, :content, :author]
+  ## 이거랑 같다고함!
+
   ## 맵핑되는 테이블 네임
   # @derive {Jason.Encoder, only: [:id, :title, :content, :author, :inserted_at, :updated_at]}
   schema "posts" do
@@ -29,7 +33,7 @@ defmodule HelloPhx.Posts.Post do
     |> or_where([p], p.author == "abc")
     |> order_by([p], desc: p.id)
     |> Repo.all()
-    |> IO.inspect(label: "select_all")
+    # |> IO.inspect(label: "select_all")
   end
 
 
