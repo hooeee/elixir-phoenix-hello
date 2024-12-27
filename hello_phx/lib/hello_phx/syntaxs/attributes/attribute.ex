@@ -22,4 +22,10 @@ defmodule HelloPhx.Syntaxs.Attributes.Attribute do
     @bbb |> Enum.join(" ") |> IO.puts()
   end
 
+  @helper HelloPhx.Syntaxs.Attributes.AttributeHelper
+
+  def call_helper do
+    @helper.execute()
+  end
+
 end
