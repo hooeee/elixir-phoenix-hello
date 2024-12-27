@@ -4,7 +4,12 @@ defmodule HelloPhxWeb.PostsController do
   alias HelloPhx.Posts.Post
   # use Todos.{}
 
+
+  @abc "abc"
+
   def index(conn, _params) do
+
+    Logger.info(@abc)
     data = Post.select_all()
     json(conn, data)
   end

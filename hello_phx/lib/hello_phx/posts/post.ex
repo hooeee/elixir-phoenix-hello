@@ -4,6 +4,7 @@ defmodule HelloPhx.Posts.Post do
   import Ecto.Changeset
   import Ecto.Query
 
+
   ## 맵핑되는 테이블 네임
   # @derive {Jason.Encoder, only: [:id, :title, :content, :author, :inserted_at, :updated_at]}
   schema "posts" do
