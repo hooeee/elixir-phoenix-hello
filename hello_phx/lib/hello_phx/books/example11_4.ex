@@ -1,5 +1,4 @@
 defmodule Books.Example114 do
-
   def calculate(str) do
     1 + 1
     # String.split(str, ~r/[+\-\*\/]/)

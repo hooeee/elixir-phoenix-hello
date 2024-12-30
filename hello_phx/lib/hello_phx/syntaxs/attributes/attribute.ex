@@ -1,13 +1,10 @@
 defmodule HelloPhx.Syntaxs.Attributes.Attribute do
-
-
   ## spec은 prameter 와 return 값에 대한 타입을 정의합니다.
   ## elixirLs에서 기본적인 타입추론은 해주지만 디테일하지 않습니다.
   @spec call(number :: integer) :: integer
   def call(number) do
     number
   end
-
 
   # attribute는 값처럼 사용 될 수 있습니다.
   ## final static 이랑 같은 건가 ??
@@ -27,5 +24,4 @@ defmodule HelloPhx.Syntaxs.Attributes.Attribute do
   def call_helper do
     @helper.execute()
   end
-
 end

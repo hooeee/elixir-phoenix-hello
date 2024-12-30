@@ -1,7 +1,5 @@
 defmodule HelloPhx.Syntaxs.Conditionals.If do
-
   def run(data) do
-
     if data == 1 do
       IO.puts("data is 1")
     else
@@ -17,13 +15,12 @@ defmodule HelloPhx.Syntaxs.Conditionals.If do
   end
 
   def run2() do
-
     data = nil
+
     if data do
       IO.puts("data is not nil")
     else
       IO.puts("data is nil")
     end
-
   end
 end

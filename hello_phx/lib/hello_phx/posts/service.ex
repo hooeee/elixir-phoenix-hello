@@ -11,11 +11,11 @@ defmodule HelloPhx.Posts.Service do
     %{data: "123", title: "title", content: "content"}
   end
 
-
   def save_post(%Post{} = params) do
     # Logger.info("Save Post #{inspect(params)}")
     Map.from_struct(params)
     |> Post.create_post()
+
     # Multi.new()
     # |> Multi.insert(:post, Post.create_post(params))
     # |> Multi.run()
@@ -24,17 +24,17 @@ defmodule HelloPhx.Posts.Service do
   ## 구조체로 파라미터 받기
   def save_post_from_struct(%ServiceSaveParam{} = params) do
     Logger.info("Save Post #{inspect(params)}")
+
     Map.from_struct(params)
     |> Post.create_post()
+
     params
   end
 
-
   ## 맵 타입으로 파라미터 받기
   ## 이게 더 좋다고함
-  def save_post_from_map(%{"author" => author , "content" => content, "title" => title} = param) do
+  def save_post_from_map(%{"author" => author, "content" => content, "title" => title} = param) do
     Logger.info("Save Post #{inspect(param)}")
     Post.create_post(param)
   end
-
 end
