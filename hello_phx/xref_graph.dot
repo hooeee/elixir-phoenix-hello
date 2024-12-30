@@ -1,0 +1,82 @@
+digraph "xref graph" {
+  "lib/hello_phx.ex"
+  "lib/hello_phx/application.ex"
+  "lib/hello_phx/application.ex" -> "lib/hello_phx/repo.ex"
+  "lib/hello_phx/application.ex" -> "lib/hello_phx_web/endpoint.ex"
+  "lib/hello_phx_web/endpoint.ex" -> "lib/hello_phx_web.ex" [label="(compile)"]
+  "lib/hello_phx_web/endpoint.ex" -> "lib/hello_phx_web/router.ex"
+  "lib/hello_phx_web/router.ex" -> "lib/hello_phx_web.ex" [label="(compile)"]
+  "lib/hello_phx_web/router.ex" -> "lib/hello_phx_web/components/layouts.ex"
+  "lib/hello_phx_web/components/layouts.ex" -> "lib/hello_phx_web.ex" [label="(compile)"]
+  "lib/hello_phx_web/components/layouts.ex" -> "lib/hello_phx_web/components/core_components.ex" [label="(export)"]
+  "lib/hello_phx_web/components/core_components.ex" -> "lib/hello_phx_web/gettext.ex" [label="(compile)"]
+  "lib/hello_phx_web/components/layouts.ex" -> "lib/hello_phx_web/endpoint.ex"
+  "lib/hello_phx_web/components/layouts.ex" -> "lib/hello_phx_web/gettext.ex" [label="(export)"]
+  "lib/hello_phx_web/components/layouts.ex" -> "lib/hello_phx_web/router.ex"
+  "lib/hello_phx_web/router.ex" -> "lib/hello_phx_web/controllers/page_controller.ex"
+  "lib/hello_phx_web/controllers/page_controller.ex" -> "lib/hello_phx_web.ex" [label="(compile)"]
+  "lib/hello_phx_web/controllers/page_controller.ex" -> "lib/hello_phx_web/components/layouts.ex"
+  "lib/hello_phx_web/controllers/page_controller.ex" -> "lib/hello_phx_web/endpoint.ex"
+  "lib/hello_phx_web/controllers/page_controller.ex" -> "lib/hello_phx_web/gettext.ex" [label="(export)"]
+  "lib/hello_phx_web/controllers/page_controller.ex" -> "lib/hello_phx_web/router.ex"
+  "lib/hello_phx_web/router.ex" -> "lib/hello_phx_web/controllers/posts_controller.ex"
+  "lib/hello_phx_web/controllers/posts_controller.ex" -> "lib/hello_phx/posts/post.ex"
+  "lib/hello_phx/posts/post.ex" -> "lib/hello_phx/repo.ex"
+  "lib/hello_phx_web/controllers/posts_controller.ex" -> "lib/hello_phx_web.ex" [label="(compile)"]
+  "lib/hello_phx_web/controllers/posts_controller.ex" -> "lib/hello_phx_web/components/layouts.ex"
+  "lib/hello_phx_web/controllers/posts_controller.ex" -> "lib/hello_phx_web/endpoint.ex"
+  "lib/hello_phx_web/controllers/posts_controller.ex" -> "lib/hello_phx_web/gettext.ex" [label="(export)"]
+  "lib/hello_phx_web/controllers/posts_controller.ex" -> "lib/hello_phx_web/router.ex"
+  "lib/hello_phx_web/router.ex" -> "lib/hello_phx_web/controllers/todo_controller.ex"
+  "lib/hello_phx_web/controllers/todo_controller.ex" -> "lib/hello_phx_web.ex" [label="(compile)"]
+  "lib/hello_phx_web/controllers/todo_controller.ex" -> "lib/hello_phx_web/components/layouts.ex"
+  "lib/hello_phx_web/controllers/todo_controller.ex" -> "lib/hello_phx_web/endpoint.ex"
+  "lib/hello_phx_web/controllers/todo_controller.ex" -> "lib/hello_phx_web/gettext.ex" [label="(export)"]
+  "lib/hello_phx_web/controllers/todo_controller.ex" -> "lib/hello_phx_web/router.ex"
+  "lib/hello_phx_web/router.ex" -> "lib/hello_phx_web/telemetry.ex"
+  "lib/hello_phx/application.ex" -> "lib/hello_phx_web/telemetry.ex"
+  "lib/hello_phx/books/example11_4.ex"
+  "lib/hello_phx/comments/comment.ex"
+  "lib/hello_phx/mailer.ex"
+  "lib/hello_phx/posts/post.ex"
+  "lib/hello_phx/posts/service.ex"
+  "lib/hello_phx/posts/service.ex" -> "lib/hello_phx/posts/post.ex" [label="(export)"]
+  "lib/hello_phx/posts/service.ex" -> "lib/hello_phx/posts/service_save_param.ex" [label="(export)"]
+  "lib/hello_phx/posts/service_save_param.ex"
+  "lib/hello_phx/repo.ex"
+  "lib/hello_phx/syntaxs/applications/application.ex"
+  "lib/hello_phx/syntaxs/applications/sample.ex"
+  "lib/hello_phx/syntaxs/applications/sample.ex" -> "lib/hello_phx/repo.ex" [label="(compile)"]
+  "lib/hello_phx/syntaxs/attributes/attribute.ex"
+  "lib/hello_phx/syntaxs/attributes/attribute.ex" -> "lib/hello_phx/syntaxs/attributes/attribute_helper.ex"
+  "lib/hello_phx/syntaxs/attributes/attribute_helper.ex"
+  "lib/hello_phx/syntaxs/conditionals/case.ex"
+  "lib/hello_phx/syntaxs/conditionals/cond.ex"
+  "lib/hello_phx/syntaxs/conditionals/if.ex"
+  "lib/hello_phx/syntaxs/conditionals/with.ex"
+  "lib/hello_phx/syntaxs/pins/pin.ex"
+  "lib/hello_phx/syntaxs/syntax.ex"
+  "lib/hello_phx_web.ex"
+  "lib/hello_phx_web/components/core_components.ex"
+  "lib/hello_phx_web/components/layouts.ex"
+  "lib/hello_phx_web/controllers/error_html.ex"
+  "lib/hello_phx_web/controllers/error_html.ex" -> "lib/hello_phx_web.ex" [label="(compile)"]
+  "lib/hello_phx_web/controllers/error_html.ex" -> "lib/hello_phx_web/components/core_components.ex" [label="(export)"]
+  "lib/hello_phx_web/controllers/error_html.ex" -> "lib/hello_phx_web/endpoint.ex"
+  "lib/hello_phx_web/controllers/error_html.ex" -> "lib/hello_phx_web/gettext.ex" [label="(export)"]
+  "lib/hello_phx_web/controllers/error_html.ex" -> "lib/hello_phx_web/router.ex"
+  "lib/hello_phx_web/controllers/error_json.ex"
+  "lib/hello_phx_web/controllers/page_controller.ex"
+  "lib/hello_phx_web/controllers/page_html.ex"
+  "lib/hello_phx_web/controllers/page_html.ex" -> "lib/hello_phx_web.ex" [label="(compile)"]
+  "lib/hello_phx_web/controllers/page_html.ex" -> "lib/hello_phx_web/components/core_components.ex" [label="(export)"]
+  "lib/hello_phx_web/controllers/page_html.ex" -> "lib/hello_phx_web/endpoint.ex"
+  "lib/hello_phx_web/controllers/page_html.ex" -> "lib/hello_phx_web/gettext.ex" [label="(export)"]
+  "lib/hello_phx_web/controllers/page_html.ex" -> "lib/hello_phx_web/router.ex"
+  "lib/hello_phx_web/controllers/posts_controller.ex"
+  "lib/hello_phx_web/controllers/todo_controller.ex"
+  "lib/hello_phx_web/endpoint.ex"
+  "lib/hello_phx_web/gettext.ex"
+  "lib/hello_phx_web/router.ex"
+  "lib/hello_phx_web/telemetry.ex"
+}

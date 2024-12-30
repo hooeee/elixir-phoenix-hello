@@ -8,6 +8,7 @@ defmodule HelloPhx.Posts.Service do
     Logger.metadata(title: title, content: content)
     Logger.info("Select All #{inspect(params)}")
     Post.select_all()
+    %{data: "123", title: "title", content: "content"}
   end
 
 
