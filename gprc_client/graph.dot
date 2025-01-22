@@ -1,0 +1,5 @@
+Generated "xref_graph.dot" in the current directory. To generate a PNG:
+
+   dot -Tpng "xref_graph.dot" -o "xref_graph.png"
+
+For more options see http://www.graphviz.org/.
